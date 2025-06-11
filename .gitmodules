@@ -14,3 +14,6 @@
 [submodule "bachelor/semester-5/parallel-programming"]
 	path = bachelor/semester-5/parallel-programming
 	url = git@github.com:IlleaRo/parallel_programming.git
+[submodule "bachelor/semester-4/programming-technologies-and-methods"]
+	path = bachelor/semester-4/programming-technologies-and-methods
+	url = git@github.com:IlleaRo/Rabbits-simulation.git
