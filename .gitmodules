@@ -23,3 +23,6 @@
 [submodule "samsung-innovation-campus"]
 	path = samsung-innovation-campus
 	url = git@github.com:IlleaRo/Project-For-Samsung.git
+[submodule "eltex-programming-school"]
+	path = eltex-programming-school
+	url = git@github.com:IlleaRo/eltex-programming-school.git
