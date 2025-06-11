@@ -1,0 +1,10 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Menu";
+
+    if (HttpMethods.IsGet(Request.Method))
+    {
+        @Html.Raw(DishList.toHTMLString())
+    }
+}

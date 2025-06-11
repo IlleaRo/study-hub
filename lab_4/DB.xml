@@ -1,0 +1,258 @@
+<is_labs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="n">
+
+<public>
+
+<doctors>
+  <id>1</id>
+  <name>Dr. Jane Smith</name>
+  <spec>Cardiology</spec>
+  <empl_date>2000-01-01</empl_date>
+  <room>101</room>
+</doctors>
+
+<doctors>
+  <id>2</id>
+  <name>Dr. John Doe</name>
+  <spec>Dermatology</spec>
+  <empl_date>2010-01-01</empl_date>
+  <room>201</room>
+</doctors>
+
+<doctors>
+  <id>3</id>
+  <name>Dr. Alice Johnson</name>
+  <spec>Gastroenterology</spec>
+  <empl_date>2015-01-01</empl_date>
+  <room>301</room>
+</doctors>
+
+<doctors>
+  <id>4</id>
+  <name>Dr. Bob Williams</name>
+  <spec>Endocrinology</spec>
+  <empl_date>2018-01-01</empl_date>
+  <room>401</room>
+</doctors>
+
+<doctors>
+  <id>5</id>
+  <name>Dr. Carol Brown</name>
+  <spec>Hematology</spec>
+  <empl_date>2020-01-01</empl_date>
+  <room>501</room>
+</doctors>
+
+<doctors>
+  <id>6</id>
+  <name>имя</name>
+  <spec>Dermatology</spec>
+  <empl_date>2022-01-01</empl_date>
+  <room>123</room>
+</doctors>
+
+
+<illnesses>
+  <id>1</id>
+  <name>Heart Disease</name>
+  <spec>Cardiology</spec>
+</illnesses>
+
+<illnesses>
+  <id>2</id>
+  <name>Acne</name>
+  <spec>Dermatology</spec>
+</illnesses>
+
+<illnesses>
+  <id>3</id>
+  <name>IBS</name>
+  <spec>Gastroenterology</spec>
+</illnesses>
+
+<illnesses>
+  <id>4</id>
+  <name>Diabetes</name>
+  <spec>Endocrinology</spec>
+</illnesses>
+
+<illnesses>
+  <id>5</id>
+  <name>Anemia</name>
+  <spec>Hematology</spec>
+</illnesses>
+
+
+<patients>
+  <id>1</id>
+  <name>John Smith</name>
+  <birth_year>1980</birth_year>
+  <sex>M</sex>
+</patients>
+
+<patients>
+  <id>2</id>
+  <name>Jane Doe</name>
+  <birth_year>1990</birth_year>
+  <sex>F</sex>
+</patients>
+
+<patients>
+  <id>3</id>
+  <name>Alice Johnson</name>
+  <birth_year>1995</birth_year>
+  <sex>F</sex>
+</patients>
+
+<patients>
+  <id>4</id>
+  <name>Bob Williams</name>
+  <birth_year>1985</birth_year>
+  <sex>M</sex>
+</patients>
+
+<patients>
+  <id>5</id>
+  <name>Carol Brown</name>
+  <birth_year>1998</birth_year>
+  <sex>F</sex>
+</patients>
+
+
+<trash_containers>
+  <id>2</id>
+  <city>Санкт-Петербург</city>
+  <street>Невский проспект</street>
+  <house>69</house>
+  <allowed_waste><element>Картон</element><element>Стекло</element></allowed_waste>
+</trash_containers>
+
+<trash_containers>
+  <id>8</id>
+  <city>Самара</city>
+  <street>Тюленина</street>
+  <house>3</house>
+  <allowed_waste><element>Пластик</element><element>Метал</element></allowed_waste>
+</trash_containers>
+
+<trash_containers>
+  <id>9</id>
+  <city>Москва</city>
+  <street>Линейная</street>
+  <house>67</house>
+  <allowed_waste><element>Бумага</element><element>Стекло</element></allowed_waste>
+</trash_containers>
+
+<trash_containers>
+  <id>12</id>
+  <city>Магадан</city>
+  <street>Кирова</street>
+  <house>15</house>
+  <allowed_waste><element>Пластик</element><element>Стекло</element></allowed_waste>
+</trash_containers>
+
+<trash_containers>
+  <id>6</id>
+  <city>Пермь</city>
+  <street>Ленина</street>
+  <house>7</house>
+  <allowed_waste><element>Стекло</element></allowed_waste>
+</trash_containers>
+
+<trash_containers>
+  <id>13</id>
+  <city>Новосибирск</city>
+  <street>Красный проспект</street>
+  <house>262</house>
+  <allowed_waste><element>Пластик</element><element>Картон</element><element>Метал</element></allowed_waste>
+</trash_containers>
+
+<trash_containers>
+  <id>14</id>
+  <city>Default City</city>
+  <street>Default Street</street>
+  <house>1</house>
+  <allowed_waste xsi:nil="true"/>
+</trash_containers>
+
+
+<visits>
+  <date>2022-01-01</date>
+  <doctor_id>1</doctor_id>
+  <patient_id>1</patient_id>
+  <illness_id>1</illness_id>
+</visits>
+
+<visits>
+  <date>2022-01-02</date>
+  <doctor_id>2</doctor_id>
+  <patient_id>2</patient_id>
+  <illness_id>2</illness_id>
+</visits>
+
+<visits>
+  <date>2022-01-03</date>
+  <doctor_id>3</doctor_id>
+  <patient_id>3</patient_id>
+  <illness_id>3</illness_id>
+</visits>
+
+<visits>
+  <date>2022-01-04</date>
+  <doctor_id>4</doctor_id>
+  <patient_id>4</patient_id>
+  <illness_id>4</illness_id>
+</visits>
+
+<visits>
+  <date>2022-01-05</date>
+  <doctor_id>5</doctor_id>
+  <patient_id>5</patient_id>
+  <illness_id>5</illness_id>
+</visits>
+
+<visits>
+  <date>2023-01-06</date>
+  <doctor_id>1</doctor_id>
+  <patient_id>2</patient_id>
+  <illness_id>1</illness_id>
+</visits>
+
+<visits>
+  <date>2023-01-07</date>
+  <doctor_id>2</doctor_id>
+  <patient_id>3</patient_id>
+  <illness_id>2</illness_id>
+</visits>
+
+<visits>
+  <date>2023-01-08</date>
+  <doctor_id>3</doctor_id>
+  <patient_id>4</patient_id>
+  <illness_id>3</illness_id>
+</visits>
+
+<visits>
+  <date>2024-01-09</date>
+  <doctor_id>1</doctor_id>
+  <patient_id>5</patient_id>
+  <illness_id>1</illness_id>
+</visits>
+
+<visits>
+  <date>2024-01-10</date>
+  <doctor_id>1</doctor_id>
+  <patient_id>1</patient_id>
+  <illness_id>1</illness_id>
+</visits>
+
+<visits>
+  <date>2023-10-10</date>
+  <doctor_id>1</doctor_id>
+  <patient_id>1</patient_id>
+  <illness_id>1</illness_id>
+</visits>
+
+
+</public>
+
+</is_labs>
