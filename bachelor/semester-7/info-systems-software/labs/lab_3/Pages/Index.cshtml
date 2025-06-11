@@ -1,0 +1,136 @@
+﻿@page
+@model lab_3.Pages.IndexModel
+@{
+    ViewData["Title"] = "Trash Containers";
+}
+
+<h2>Trash Containers</h2>
+
+@if (Model.Containers != null && Model.Containers.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>House</th>
+                <th>Allowed Waste</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var container in Model.Containers)
+            {
+                <tr>
+                    <td>@container.id</td>
+                    <td>@container.city</td>
+                    <td>@container.street</td>
+                    <td>@container.house</td>
+                    <td>
+                        @foreach (var waste in container.allowedWaste)
+                        {
+                            @waste.ToString() <br />
+                        }
+                    </td>
+                    <td>
+                        <button class="btn-primary" onclick="openEditModal(@container.id, '@container.city', '@container.street', @container.house)">Edit</button>
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@container.id" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No containers found.</p>
+}
+
+<form method="post" asp-page-handler="Create" style="display:inline;">
+    <button type="submit" class="btn btn-success">Create</button>
+</form>
+
+
+<!-- Modal -->
+<div id="editModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Container</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeEditModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page-handler="Edit">
+                    <input type="hidden" id="edit-id" name="id" />
+                    <div class="form-group">
+                        <label for="edit-city">City</label>
+                        <input type="text" class="form-control" id="edit-city" name="city" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-street">Street</label>
+                        <input type="text" class="form-control" id="edit-street" name="street" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-house">House</label>
+                        <input type="number" class="form-control" id="edit-house" name="house" />
+                    </div>
+                    <div class="form-group">
+                        <label>Allowed Waste</label>
+                        @foreach (var wasteType in Enum.GetValues(typeof(TrashContainer.TrashType)).Cast<TrashContainer.TrashType>())
+                        {
+                            <div>
+                                <input type="checkbox" name="AllowedWaste" value="@wasteType.ToString()" />
+                                <label>@wasteType</label>
+                            </div>
+                        }
+                    </div>
+                    <br>
+
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function openEditModal(id, city, street, house/*, allowedWaste*/) {
+            document.getElementById('edit-id').value = id;
+            document.getElementById('edit-city').value = city;
+            document.getElementById('edit-street').value = street;
+            document.getElementById('edit-house').value = house;
+
+            // Clear all checkboxes
+            document.querySelectorAll('input[name="AllowedWaste"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+
+            // TODO: Set checkboxes for already allowed waste
+            /*
+            allowedWaste.forEach(waste => {
+                console.log(`Setting checkbox for waste: ${waste}`);
+                const checkbox = document.querySelector(`input[name="AllowedWaste"][value="${waste}"]`);
+                if (checkbox) {
+                    checkbox.checked = true;
+                } else {
+                    console.warn(`Checkbox not found for waste: ${waste}`);
+                }
+            });
+            */
+
+            document.getElementById('editModal').style.display = 'block';
+        }
+
+        function closeEditModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+    </script>
+}

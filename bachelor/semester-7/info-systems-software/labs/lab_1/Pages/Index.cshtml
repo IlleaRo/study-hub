@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+<div class="text-center">
+@{
+    ViewData["Title"] = "Home page";
+    if (HttpMethods.IsPost(Request.Method))
+    {
+        try
+        {
+            string binary_input = Request.Form["binary_input"];
+            string decimal_output = Convert.ToInt32(binary_input, 2).ToString();
+                <div style="color:green; font-size:42px">Result: @decimal_output</div>
+        }
+        catch (Exception e)
+        {
+                <div style="color:red; font-size:42px">Error: @e.Message</div>
+        }
+    }
+    else
+    {
+            <h1 class="display-4">Binary converter</h1>
+            <p />
+            <form method="post">
+                <input name="binary_input" />
+                <input type="submit" value="to decimal" />
+            </form>
+    }
+}
+</div>

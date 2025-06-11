@@ -1,0 +1,70 @@
+﻿@page
+@model EditModel
+@{
+    ViewData["Title"] = "Add dish";
+    if (HttpMethods.IsPost(Request.Method))
+    {
+        try
+        {
+            Dish dish = new Dish(Request.Form["price"], Request.Form["name"], Request.Form["category"]);
+            DishList.add(dish);
+            <div>Success</div>
+        }
+        catch (Exception e)
+        {
+            <div>Error: @e.Message</div>
+        }
+    }
+    else
+    {
+        <h1>@ViewData["Title"]</h1>
+
+        <div>
+            <form method="post" style="display:table;">
+
+                <div style="display:table-row;">
+                    <label style="padding-right: 10px;" for="name">Dish name:</label>
+                    <input style="display:table-cell;" type="text" id="name" name="name" />
+                </div>
+
+                <div style="display:table-row;">
+                    <label style="padding-right: 10px;" for="price">Dish price:</label>
+                    <input style="display:table-cell;" type="number" id="price" name="price" />
+                </div>
+
+                <div style="display:table-row;"> Dish category:</div>
+
+                <div style="display:table-row;">
+                    <input style="display:table-cell;" type="radio" id="salad" name="category" value="Salad" />
+                    <label style="padding-right: 10px;" for="salad">Salad</label>
+                </div>
+
+                <div style="display:table-row;">
+                    <input style="display:table-cell;" type="radio" id="soup" name="category" value="Soup" />
+                    <label style="padding-right: 10px;" for="soup">Soup</label>
+                </div>
+
+                <div style="display:table-row;">
+                    <input style="display:table-cell;" type="radio" id="main" name="category" value="Main" />
+                    <label style="padding-right: 10px;" for="main">Main</label>
+                </div>
+
+                <div style="display:table-row;">
+                    <input style="display:table-cell;" type="radio" id="dessert" name="category" value="Dessert" />
+                    <label style="padding-right: 10px;" for="dessert">Dessert</label>
+                </div>
+
+                <div style="display:table-row;">
+                    <input style="display:table-cell;" type="radio" id="drink" name="category" value="Drink" />
+                    <label for="drink">Drink</label>
+                </div>
+
+                <div style="display:table-row;">
+                    <input style="display:table-cell;" type="submit" value="Add" />
+                </div>
+            </form>
+        </div>
+
+    }
+}
+
