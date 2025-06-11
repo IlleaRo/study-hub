@@ -1,0 +1,1 @@
+{"name": "m2_8params", "needs_norm": true, "input": ["temp", "snow_1h", "clouds_all", "weather_main", "rain_1h", "holiday_digit", "month_digit", "hour_digit"], "output": ["traffic_volume"], "r2": 0.713, "rmse": 0.145754}
