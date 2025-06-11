@@ -8,3 +8,6 @@
 [submodule "bachelor/semester-6/information-systems"]
 	path = bachelor/semester-6/information-systems
 	url = git@github.com:IlleaRo/infoSys.git
+[submodule "bachelor/semester-5/computer-architecture"]
+	path = bachelor/semester-5/computer-architecture
+	url = git@github.com:IlleaRo/ASVT.git
