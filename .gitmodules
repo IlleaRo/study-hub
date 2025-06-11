@@ -5,3 +5,6 @@
 [submodule "bachelor/semester-7/info-systems-software/coursework"]
 	path = bachelor/semester-7/info-systems-software/coursework
 	url = git@github.com:IlleaRo/POIS_coursework.git
+[submodule "bachelor/semester-6/information-systems"]
+	path = bachelor/semester-6/information-systems
+	url = git@github.com:IlleaRo/infoSys.git
