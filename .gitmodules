@@ -11,3 +11,6 @@
 [submodule "bachelor/semester-5/computer-architecture"]
 	path = bachelor/semester-5/computer-architecture
 	url = git@github.com:IlleaRo/ASVT.git
+[submodule "bachelor/semester-5/parallel-programming"]
+	path = bachelor/semester-5/parallel-programming
+	url = git@github.com:IlleaRo/parallel_programming.git
