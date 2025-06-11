@@ -1,0 +1,1 @@
+{"name": "m1", "needs_norm": false, "input": ["hour_digit", "clouds_all"], "output": ["traffic_volume"], "r2": 0.681, "rmse": 1120.130561, "polynominal_degree": 4}
