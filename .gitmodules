@@ -20,3 +20,6 @@
 [submodule "bachelor/semester-3/programming"]
 	path = bachelor/semester-3/programming
 	url = git@github.com:IlleaRo/programming-coursework.git
+[submodule "samsung-innovation-campus"]
+	path = samsung-innovation-campus
+	url = git@github.com:IlleaRo/Project-For-Samsung.git
