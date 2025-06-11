@@ -1,0 +1,4 @@
+[submodule "bachelor/semester-6/algorithms-and-data-structures"]
+	path = bachelor/semester-6/algorithms-and-data-structures
+	url = git@github.com:IlleaRo/AISD.git
+	branch = anton-work
